@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Import the font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* Ensure html and body take full height */
+html, body {
+    height: 100%;
+    font-family: "Plus Jakarta Sans", sans-serif; /* Apply the font globally */
+    margin: 0;
+}
+
+/* Set up the body to use Flexbox for a column layout */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* Ensure app-root takes up full height and works with Flexbox */
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Make the router outlet flexible so content fills the available space */
+.router-outlet {
+    flex: 1;
+}
+
+/* Ensure the footer stays at the bottom with auto top margin */
+.footer {
+    margin-top: auto;
+}
+
+/* Apply global font family to all elements */
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}

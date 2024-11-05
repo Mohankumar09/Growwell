@@ -1,0 +1,59 @@
+<!-- Hero Section with Carousel -->
+<section class="hero">
+  <div class="carousel">
+    <div class="carousel-slide" *ngFor="let slide of slides; let i = index" [ngClass]="{'active': i === currentSlide}">
+      <img [src]="slide" alt="Hero Image {{ i + 1 }}" />
+    </div>
+    <button class="carousel-button prev" (click)="prevSlide()">&#10094;</button>
+    <button class="carousel-button next" (click)="nextSlide()">&#10095;</button>
+  </div>
+</section>
+
+<!-- Show 5 Products -->
+<section class="products">
+  <h2>Our Products</h2>
+  <div class="product-list">
+    <div *ngFor="let product of products" class="product-card">
+      <img [src]="product.image" alt="{{ product.name }}" />
+      <h3>{{ product.name }}</h3>
+    </div>
+  </div>
+</section>
+
+<!-- Shop by Collection Section -->
+<section class="collections">
+  <h2>Shop by Collection</h2>
+  <div class="collection-list">
+    <div class="collection-item">Vegetables</div>
+    <div class="collection-item">Fruits</div>
+    <div class="collection-item">Spices</div>
+    <div class="collection-item">Nutrimix</div>
+    <div class="collection-item">Millets</div>
+  </div>
+</section>
+
+<!-- Best Selling Section -->
+<section class="best-selling">
+  <h2>Best Selling Products</h2>
+  <div class="product-list">
+    <div *ngFor="let product of bestSellingProducts" class="product-card">
+      <img [src]="product.image" alt="{{ product.name }}" />
+      <h3>{{ product.name }}</h3>
+    </div>
+  </div>
+</section>
+
+<!-- Our Story Section -->
+<section class="our-story">
+  <div class="story-content">
+    <h2>Our Story</h2>
+    <p>
+      At Growwell, we are committed to providing high-quality fresh vegetables and fruits to markets worldwide. With a focus on sustainable farming practices, we ensure that our produce not only meets the highest standards of quality but also contributes to the health of our planet. Our team works tirelessly to maintain strong relationships with farmers and suppliers, ensuring a fresh and reliable supply chain. 
+    </p>
+    <button class="learn-more">Learn More</button>
+  </div>
+  <div class="story-image">
+    <img src="assets/images/untitled_artwork_66.jpg" alt="Growwell Story Image" />
+  </div>
+</section>
+

@@ -1,0 +1,27 @@
+<nav class="navbar">
+  <div class="logo">
+    <a href="/">
+      <img src="assets/images/growwell logo.png" alt="Growwell Logo" />
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a routerLink="/home">Home</a></li>
+    <li><a routerLink="/shop-category">Shop by Category</a></li>
+    <li><a routerLink="/our-story">Our Story</a></li>
+    <li><a routerLink="/contact">Contact</a></li>
+  </ul>
+
+<div class="search-cart-wishlist">
+  <input type="text" placeholder="Search for products..." class="search-bar" />
+  
+  <!-- Cart Icon -->
+  <a href="#" class="cart-icon" title="View Cart">
+    <fa-icon [icon]="['fas', 'shopping-cart']"></fa-icon>
+  </a>
+
+  <!-- Wishlist Icon -->
+  <a href="#" class="wishlist-icon" title="View Wishlist">
+    <fa-icon [icon]="['fas', 'heart']"></fa-icon>
+  </a>
+</div>
+</nav>

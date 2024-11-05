@@ -1,0 +1,207 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.carousel {
+  position: relative;
+  width: 100%; /* Ensure full width */
+  height: 650px; /* Set a fixed height for the carousel */
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none; /* Hide slides by default */
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.carousel-slide.active {
+  display: flex; /* Only display active slide */
+  opacity: 1;
+}
+
+/* Ensure images fit within the carousel */
+.carousel-slide img {
+  width: 100%; /* Make the image take the full width */
+  height: 100%; /* Make the image take the full height */
+  object-fit: cover; /* This will maintain aspect ratio while covering the entire area */
+  transition: transform 1s ease-in-out;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8); /* Light background for buttons */
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1; /* Ensure buttons are on top of images */
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s ease;
+}
+
+.carousel-button:hover {
+  background: #4d1600cb; /* Change background on hover */
+}
+
+.prev {
+  left: 10px; /* Position the previous button */
+}
+
+.next {
+  right: 10px; /* Position the next button */
+}
+
+.products {
+  padding: 20px;
+}
+
+/* Product Section */
+ .best-selling h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #4d1600cb;
+  letter-spacing: 3px;
+  font-weight: bold; /* Make the heading bold */
+  margin-top: 60px; /* Add a margin top to maintain space above the heading */
+  text-align: center;
+  padding: 20px;
+}
+
+.products h2 {
+  font-size: 30px; /* Adjust the font size as needed */
+  color: #4d1600cb;
+  letter-spacing: 3px; /* Change the color to your desired value */
+  font-weight: bold;
+  margin-top: 60px;
+  padding: 20px;
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.product-card {
+  width: 200px; /* Adjust the width to a reasonable size */
+  text-align: center;
+  transition: transform 0.3s ease; /* Add transition for hover effect */
+  overflow: hidden; /* Hide any overflow from the images */
+}
+
+.product-card img {
+  width: 100%; /* Ensure the image takes the full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 250px; /* Set a maximum height for the images */
+  object-fit: cover; /* Maintain aspect ratio while covering the area */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Collections Section */
+.collections {
+  padding: 20px;
+}
+
+.collections h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #4d1600cb;
+  letter-spacing: 3px;
+  font-weight: bold; /* Make the heading bold */
+  text-align: center;
+  margin-bottom: 40px; /* Add margin below the heading */
+}
+
+.collection-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.collection-item {
+  background: #4d1600cb;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.collection-item:hover {
+  background: #C4A484; /* Darken on hover */
+}
+
+/* Our Story Section */
+.our-story {
+  display: flex;
+  align-items: center; /* Center content vertically */
+  padding: 40px;
+  background: #f4f4f4;
+}
+
+.story-content {
+  flex: 1; /* Allows content to take available space */
+  padding: 20px;
+  text-align: center;
+}
+
+
+.story-content p {
+  margin: 0; /* Remove default margin */
+  font-size: 18px; /* Increase font size */
+  line-height: 1.5; /* Maintain line height */
+  color: #4d1600; /* Text color */
+  margin-bottom: 60px;
+}
+.story-content h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #4d1600cb;
+  letter-spacing: 3px;
+  font-weight: bold; /* Make the heading bold */
+  margin-top: 60px; /* Add a margin top to maintain space above the heading */
+  text-align: center;
+   padding: 20px;
+}
+
+
+.learn-more {
+  background-color: #4d1600cb; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.learn-more:hover {
+  background-color: #C4A484; /* Darker shade on hover */
+}
+
+.story-image {
+  flex: 1; /* Allows image to take available space */
+  padding: 20px;
+}
+
+.story-image img {
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for the image */
+}

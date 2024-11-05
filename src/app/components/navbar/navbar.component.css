@@ -1,0 +1,109 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center; /* Center items vertically */
+  padding: 20px; /* Padding around the navbar */
+  background-color: white; /* Background color */
+  color: #4d1600cb; /* Text color */
+}
+
+.navbar .logo img {
+  height: 90px; /* Adjust the height of the logo as needed */
+  width: auto; /* Maintain aspect ratio */
+  display: inline-block; /* Inline display */
+}
+
+.nav-links {
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Display links in a row */
+  gap: 20px; /* Space between links */
+  position: relative; /* Positioning for pseudo-elements */
+}
+
+.nav-links li {
+  position: relative; /* Positioning for the underline effect */
+}
+
+.nav-links li a {
+  text-decoration: none; /* Remove underline */
+  color: #4d1600cb; /* Link color */
+  font-size: 20px; /* Font size */
+  padding: 8px 16px; /* Padding around links */
+  transition: color 0.3s; /* Transition for text color */
+}
+
+/* Underline effect for links */
+.nav-links li::after {
+  content: '';
+  position: absolute; /* Position the underline */
+  left: 0; /* Align left */
+  bottom: -28px; /* Space between text and underline */
+  height: 2.5px; /* Height of the underline */
+  width: 100%; /* Full width */
+  background-color: #C4A484; /* Color of the underline */
+  transform: scaleX(0); /* Initially hide the underline */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the underline */
+}
+
+/* Show the underline on hover */
+.nav-links li:hover::after {
+  transform: scaleX(1); /* Scale the underline to full width */
+}
+
+/* Search, cart, and wishlist section */
+.search-cart-wishlist {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  gap: 15px; /* Space between items */
+}
+
+.search-bar {
+  padding: 8px; /* Padding inside search bar */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #4d1600cb; /* Border color */
+}
+
+.cart-icon, .wishlist-icon {
+  font-size: 20px; /* Font size for icons */
+  color: #4d1600cb; /* Icon color */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column; /* Stack navbar items vertically */
+      align-items: flex-start; /* Align items to the start */
+  }
+
+  .nav-links {
+      flex-direction: column; /* Stack links vertically */
+      gap: 10px; /* Space between links */
+      padding: 10px 0; /* Add padding around links */
+  }
+
+  .nav-links li {
+      width: 100%; /* Make links full width */
+      text-align: left; /* Align text to the left */
+  }
+
+  .search-cart-wishlist {
+      width: 100%; /* Make search and icons full width */
+      justify-content: space-between; /* Space between items */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  .nav-links li a {
+      font-size: 18px; /* Reduce font size for smaller screens */
+  }
+
+  .cart-icon, .wishlist-icon {
+      font-size: 18px; /* Reduce icon size */
+  }
+}
