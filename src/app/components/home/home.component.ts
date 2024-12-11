@@ -22,8 +22,9 @@ export class HomeComponent implements OnInit {
   ];
 
   bestSellingProducts = [
-    { id: 1, name: 'Best Selling Vegetable', image: 'assets/images/honey4.jpg' },
-    { id: 2, name: 'Best Selling Fruit', image: 'assets/images/honey6.jpg' },
+    { id: 1, name: 'Best Selling Spices', image: 'assets/images/honey4.jpg' },
+    { id: 2, name: 'Best Selling Nutrimix', image: 'assets/images/honey6.jpg' },
+    { id: 3, name: 'best selling honey', image: 'assets/images/honey6.jpg' },
   ];
 
   ngOnInit() {

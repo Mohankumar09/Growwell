@@ -161,7 +161,6 @@
   text-align: center;
 }
 
-
 .story-content p {
   margin: 0; /* Remove default margin */
   font-size: 18px; /* Increase font size */
@@ -179,7 +178,6 @@
   text-align: center;
    padding: 20px;
 }
-
 
 .learn-more {
   background-color: #4d1600cb; /* Button background color */
